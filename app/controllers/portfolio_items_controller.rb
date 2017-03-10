@@ -3,6 +3,10 @@ class PortfolioItemsController < ApplicationController
 		@portfolio_items = PortfolioItem.all
 	end
 
+	def show
+		set_portfolio_item
+	end
+
 	def new
 		@portfolio_item = PortfolioItem.new
 	end
