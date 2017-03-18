@@ -3,6 +3,11 @@ class PortfolioItemsController < ApplicationController
     @portfolio_items = PortfolioItem.all
   end
 
+  #example custom angular scope action
+  def angular
+    @angular_portfolio_items = PortfolioItem.angular
+  end
+
   def show
     set_portfolio_item
   end
