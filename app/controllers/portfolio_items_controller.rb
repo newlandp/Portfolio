@@ -3,12 +3,18 @@ class PortfolioItemsController < ApplicationController
     @portfolio_items = PortfolioItem.all
   end
 
+  #example custom angular scope action
+  def angular
+    @angular_portfolio_items = PortfolioItem.angular
+  end
+
   def show
     set_portfolio_item
   end
 
   def new
     @portfolio_item = PortfolioItem.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -50,7 +56,7 @@ class PortfolioItemsController < ApplicationController
 private
   
   def portfolio_item_params
-    params.require(:portfolio_item).permit(:title, :subtitle, :body)
+    params.require(:portfolio_item).permit(:title, :subtitle, :body, technologies_attributes: [:name])
   end
 
   def set_portfolio_item
