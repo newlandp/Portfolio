@@ -1,5 +1,5 @@
 <h1>Portfolio Items</h1>
 
-<%= link_to "Create a new Item", new_portfolio_item_path %>
+<%= link_to "Create a new Item", new_portfolio_item_path if logged_in?(:site_admin) %>
 
 <%= render @portfolio_items %>
