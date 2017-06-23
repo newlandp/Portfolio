@@ -162,7 +162,7 @@ body {
 }
 
 /*
- * hr
+ * Custom Styles
  */
 
  hr {
@@ -170,4 +170,33 @@ body {
   margin-top: 15px;
   margin-bottom: 22px;
  }
+
+.card-block {
+  color: black;
+  text-align: left;
+}
+
+.col-top {
+  @media screen and (max-width: 575px) {
+    margin-bottom: 35px;
+  }
+}
+
+.auth-links a {
+  color: black;
+}
+
+.auth-links {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 
