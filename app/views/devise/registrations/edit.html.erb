@@ -23,10 +23,10 @@
 
           <div class="form-group">
             <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
             <% if @minimum_password_length %>
-              <br />
-              <em><%= @minimum_password_length %> characters minimum</em>
+              <%= f.password_field :password, autocomplete: "off", placeholder: "#{@minimum_password_length} characters minimum", class: "form-control" %>
+            <% else %>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
             <% end %>
           </div>
 
@@ -57,7 +57,5 @@
     </div>
   </div>
 </div>
-
-
 
 

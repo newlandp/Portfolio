@@ -187,7 +187,21 @@ body {
 }
 
 .auth-links {
-  margin-top: 10px;
+  margin-top: 15px;
+}
+
+.register-text {
+  text-align: right;
+}
+
+/*.cover-container {
+  display: table-cell;
+}*/
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
 }
 
 
